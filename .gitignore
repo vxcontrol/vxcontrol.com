@@ -1,3 +1,14 @@
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+.idea
+.vscode
+
+# next.js
+/.next/
+/out/
+
 # Logs
 logs
 *.log
