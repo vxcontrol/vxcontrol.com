@@ -1,4 +1,4 @@
-export default async function IndexPage() {
+const IndexPage = async () => {
     return (
         <>
             <section>
@@ -6,4 +6,6 @@ export default async function IndexPage() {
             </section>
         </>
     );
-}
+};
+
+export default IndexPage;
