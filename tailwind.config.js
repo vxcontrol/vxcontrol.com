@@ -33,6 +33,8 @@ module.exports = {
 
                 't-base': ['24px', { lineHeight: '160%', fontWeight: '400', }],
                 't-medium': ['18px', { lineHeight: '160%', fontWeight: '400', }],
+                't-small': ['16', { lineHeight: '140%', fontWeight: '400', }],
+                't-small-x': ['14', { lineHeight: '140%', fontWeight: '400', }],
             },
             backgroundImage: {
                 none: 'unset',
@@ -46,7 +48,8 @@ module.exports = {
                 },
                 panel: '#2a2746',
                 'non-standard': {
-                    blue: '#0a97fe'
+                    blue: '#0a97fe',
+                    blue2: '#1583e9'
                 }
             },
         },
