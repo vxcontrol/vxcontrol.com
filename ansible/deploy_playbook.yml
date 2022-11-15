@@ -1,6 +1,7 @@
-- name: Deploy XDR container on stand
+- name: Deploy vxcontrol container on stand
   hosts: "all-docker-deploy"
   gather_facts: False
+  tasks:
     - name: Stop current containers
       shell: "docker-compose -f docker-compose.current.yml down || true"
 
