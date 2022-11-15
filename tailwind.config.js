@@ -7,13 +7,25 @@ module.exports = {
         './components/**/*.{ts,tsx}'
     ],
     theme: {
+        screens: {
+            mobile: { max: '414px' },
+            tablet: { min: '415px', max: '767px' },
+            sm: { min: '768px', max: '1023px' },
+            xl: { min: '1024px', max: '1439px' },
+            '2xl': { min: '1440px' }
+        },
         container: {
             center: true,
             padding: '1.5rem',
         },
         extend: {
+            backgroundImage: {
+                none: 'unset',
+            },
             colors: {
                 ...colors,
+                'main-dark': '#1f1d37',
+                'main-light': '#ffffff',
                 brand: {
                     50: '#f3f3f3',
                     100: '#e7e7e7',
@@ -30,5 +42,8 @@ module.exports = {
             },
         },
     },
-    plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')]
+    plugins: [
+        require('tailwindcss-animate'),
+        require('@tailwindcss/typography')
+    ]
 };

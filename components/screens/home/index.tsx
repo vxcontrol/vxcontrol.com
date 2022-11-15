@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
+import { HeroBlock } from '@/components/screens/home/components/HeroBlock';
 
 export type HomeScreenProps = {
 }
@@ -9,7 +10,7 @@ export const HomeScreen: FC<HomeScreenProps> = (props) => {
 
     return (
         <>
-            <h1>Platform for Everyone</h1>
+            <HeroBlock />
 
             <Link href={'/cookie-notice'}>
                 link to CookieNoticePage
