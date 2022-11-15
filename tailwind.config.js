@@ -8,7 +8,7 @@ module.exports = {
     ],
     theme: {
         screens: {
-            mobile: { min: '380px', max: '414px' },
+            mobile: { min: '320px', max: '414px' },
             small: { min: '415px', max: '767px' },
             medium: { min: '768px', max: '1023px' },
             large: { min: '1024px', max: '1439px' },
@@ -30,6 +30,7 @@ module.exports = {
                 'h-medium': ['40px', { lineHeight: '140%', fontWeight: '400', }],
                 'h-medium-x': ['36px', { lineHeight: '140%', fontWeight: '400', }],
                 'h-small': ['32px', { lineHeight: '140%', fontWeight: '400', }],
+                'h-small-x': ['24px', { lineHeight: '140%', fontWeight: '400', }],
 
                 't-base': ['24px', { lineHeight: '160%', fontWeight: '400', }],
                 't-medium': ['18px', { lineHeight: '160%', fontWeight: '400', }],
