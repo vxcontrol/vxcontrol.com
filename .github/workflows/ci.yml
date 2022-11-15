@@ -67,7 +67,7 @@ jobs:
 
       - name: Add hostname
         run: |
-          echo "${{ secrets.SSH_REMOTE_HOST }}" >> $GITHUB_WORKSPACE/ansible/ansible_hosts
+          echo -e "${{ secrets.SSH_REMOTE_HOST }}" >> $GITHUB_WORKSPACE/ansible/ansible_hosts
       - name: Run playbook
         env:
           ANSIBLE_HOST_KEY_CHECKING: "False"
