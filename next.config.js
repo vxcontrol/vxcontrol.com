@@ -31,6 +31,30 @@ const nextConfig = {
     eslint: {
         ignoreDuringBuilds: true
     },
+    webpack: (config, options) => {
+        config.module.rules.push({
+            test: /\.svg$/,
+            use: ['@svgr/webpack']
+        });
+        return config;
+    },
+    i18n: {
+        locales: ['ru', 'en'],
+        defaultLocale: 'ru',
+        domains: [
+            {
+                domain: 'vxcontrol.ru',
+                defaultLocale: 'ru',
+                // an optional http field can also be used to test
+                // locale domains locally with http instead of https
+                http: true
+            },
+            {
+                domain: 'vxcontrol.com',
+                defaultLocale: 'en'
+            }
+        ]
+    },
     async headers() {
         return [
             {
