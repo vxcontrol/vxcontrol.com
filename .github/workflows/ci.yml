@@ -8,12 +8,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set the value
-        id: step_one
-        run: |
-            apt update && apt install -y jq
-            export BUILD_VERSION=`jq .version package.json | sed 's/\"//g'`
-            echo "BUILD_VERSION=$BUILD_VERSION" >> $GITHUB_ENV
       - name: Generate Docker tags
         id: meta
         uses: docker/metadata-action@v3
