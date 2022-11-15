@@ -1,0 +1,17 @@
+- name: Deploy XDR container on stand
+  hosts: "all-docker-deploy"
+  gather_facts: False
+    - name: Stop current containers
+      shell: "docker-compose -f docker-compose.current.yml down || true"
+
+    - name: Pull image
+      shell: "docker pull docker.io/vxcontrol/landing"
+
+    - name: Start current container
+      shell: "docker-compose -f docker-compose.current.yml up -d"
+
+
+
+
+
+

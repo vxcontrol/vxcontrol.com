@@ -42,3 +42,31 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  reload_docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install Ansible
+        run: |
+          python -m pip install --upgrade pip
+          pip install ansible
+      - name: Setup ssh
+        run: |
+         service ssh status
+         eval `ssh-agent -s`
+         mkdir -p /home/runner/.ssh/
+         touch /home/runner/.ssh/id_rsa
+         echo -e "${{secrets.SSH_PRIVATE_KEY}}" > /home/runner/.ssh/id_rsa
+         chmod 700 /home/runner/.ssh/id_rsa
+
+      - name: Add hostname
+        run: |
+          echo "${{ secrets.SSH_REMOTE_HOST }}" >> .github/workflows/ansible/ansible_hosts
+      - name: Run playbook
+        env:
+          ANSIBLE_HOST_KEY_CHECKING: "False"
+        run: |
+          ansible-playbook .github/workflows/ansible/deploy_playbook.yml -i .github/workflows/ansible/ansible_hosts
