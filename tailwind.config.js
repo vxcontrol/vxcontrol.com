@@ -8,42 +8,70 @@ module.exports = {
     ],
     theme: {
         screens: {
-            mobile: { max: '414px' },
-            tablet: { min: '415px', max: '767px' },
-            sm: { min: '768px', max: '1023px' },
-            xl: { min: '1024px', max: '1439px' },
-            '2xl': { min: '1440px' }
+            mobile: { min: '380px', max: '414px' },
+            small: { min: '415px', max: '767px' },
+            medium: { min: '768px', max: '1023px' },
+            large: { min: '1024px', max: '1439px' },
+            'x-large': { min: '1440px' },
         },
         container: {
             center: true,
-            padding: '1.5rem',
+            padding: {
+                mobile: '20px',
+                small: '40px',
+                medium: '40px',
+                large: '80px',
+                'x-large': '80px',
+            },
         },
         extend: {
+            fontSize: {
+                'h-base': ['60px', { lineHeight: '140%', fontWeight: '400', }],
+                'h-medium': ['40px', { lineHeight: '140%', fontWeight: '400', }],
+                'h-small': ['32px', { lineHeight: '140%', fontWeight: '400', }],
+
+                't-base': ['24px', { lineHeight: '160%', fontWeight: '400', }],
+                't-medium': ['18px', { lineHeight: '160%', fontWeight: '400', }],
+                't-x-medium': ['18px', { lineHeight: '160%', fontWeight: '400', }],
+            },
             backgroundImage: {
                 none: 'unset',
             },
             colors: {
                 ...colors,
-                'main-dark': '#1f1d37',
-                'main-light': '#ffffff',
-                brand: {
-                    50: '#f3f3f3',
-                    100: '#e7e7e7',
-                    200: '#c4c4c4',
-                    300: '#a0a0a0',
-                    400: '#585858',
-                    500: '#111111',
-                    600: '#0f0f0f',
-                    700: '#0d0d0d',
-                    800: '#0a0a0a',
-                    900: '#080808',
-                    DEFAULT: '#111111',
-                },
+                main: {
+                    dark: '#1f1d37',
+                    light: '#ffffff',
+                    'light-gray': '#9995B0',
+                }
             },
         },
     },
     plugins: [
         require('tailwindcss-animate'),
-        require('@tailwindcss/typography')
+        require('@tailwindcss/typography'),
+        function ({ addComponents }) {
+            addComponents({
+                '.container': {
+                    maxWidth: '100%',
+
+                    '@screen mobile': {
+                        maxWidth: '414px'
+                    },
+
+                    '@screen small': {
+                        maxWidth: '768px'
+                    },
+
+                    '@screen medium': {
+                        maxWidth: '1024px'
+                    },
+
+                    '@screen large': {
+                        maxWidth: '1440px'
+                    }
+                },
+            });
+        }
     ]
 };
