@@ -28,11 +28,11 @@ module.exports = {
             fontSize: {
                 'h-base': ['60px', { lineHeight: '140%', fontWeight: '400', }],
                 'h-medium': ['40px', { lineHeight: '140%', fontWeight: '400', }],
+                'h-medium-x': ['36px', { lineHeight: '140%', fontWeight: '400', }],
                 'h-small': ['32px', { lineHeight: '140%', fontWeight: '400', }],
 
                 't-base': ['24px', { lineHeight: '160%', fontWeight: '400', }],
                 't-medium': ['18px', { lineHeight: '160%', fontWeight: '400', }],
-                't-x-medium': ['18px', { lineHeight: '160%', fontWeight: '400', }],
             },
             backgroundImage: {
                 none: 'unset',
@@ -43,6 +43,10 @@ module.exports = {
                     dark: '#1f1d37',
                     light: '#ffffff',
                     'light-gray': '#9995B0',
+                },
+                panel: '#2a2746',
+                'non-standard': {
+                    blue: '#0a97fe'
                 }
             },
         },
