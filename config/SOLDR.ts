@@ -1,10 +1,12 @@
-export type SOLRDType = {
-    [key: string]: {
-        name: string;
-        shortDescription: string;
-        description: string;
-    }
-}
+export type SOLDRAdvantages = 'system' | 'orchestration' | 'lifecycleControl' | 'detection' | 'response';
+
+export type SOLDRAdvantageType = {
+    name: string;
+    shortDescription: string;
+    description: string;
+};
+
+export type SOLRDType = { [key in SOLDRAdvantages]: SOLDRAdvantageType; }
 
 export const SOLDR: SOLRDType = {
     system: {

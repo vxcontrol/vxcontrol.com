@@ -48,6 +48,7 @@ module.exports = {
                     'light-gray': '#9995B0',
                 },
                 panel: '#2a2746',
+                popup: 'rgba(6, 5, 21, 0.6)',
                 'blue-button': '#0a97fe',
                 blue: '#005fee',
                 hover: '#cccddd',
@@ -57,6 +58,9 @@ module.exports = {
                     '0px 2px 10px rgba(21, 233, 233, 0.59)',
                     '0px 10px 30px rgba(21, 68, 233, 0.6)'
                 ],
+            },
+            backdropBlur: {
+                popup: '70px',
             }
         },
     },
