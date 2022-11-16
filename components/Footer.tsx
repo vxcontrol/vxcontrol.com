@@ -3,9 +3,7 @@ import classNames from 'classnames';
 import PhoneIcon from './assets/phone.svg';
 import MailIcon from './assets/mail.svg';
 import Link from 'next/link';
-
-const PHONE_NUMBER = '+971521127367';
-const EMAIL = 'info@a-lab.info';
+import { config } from '../config/config';
 
 export type FooterProps = {
     className?: string;
@@ -23,11 +21,11 @@ export const Footer: FC<FooterProps> = (props) => {
 
                         <a
                             className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}
-                            href={`tel:${PHONE_NUMBER}`}
+                            href={`tel:${config.footer.phoneNumber}`}
                             target={'_blank'}
                             rel={'noopener noreferrer'}
                         >
-                            {PHONE_NUMBER}
+                            {config.footer.phoneNumberString}
                         </a>
 
                     </div>
@@ -37,11 +35,11 @@ export const Footer: FC<FooterProps> = (props) => {
 
                         <a
                             className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}
-                            href={`mailto:${EMAIL}`}
+                            href={`mailto:${config.footer.email}`}
                             target={'_blank'}
                             rel={'noopener noreferrer'}
                         >
-                            {EMAIL}
+                            {config.footer.email}
                         </a>
                     </div>
                 </div>

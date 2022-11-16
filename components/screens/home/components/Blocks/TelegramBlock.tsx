@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import AtSymbolIcon from '../assets/at_symbol.svg';
-
-const TELEGRAM_LINK = 'https://t.me/+xyZ7jCIe421lODJi';
+import { config } from '../../../../../config/config';
 
 export type TelegramBlockProps = {
     className?: string;
@@ -24,7 +23,7 @@ export const TelegramBlock: FC<TelegramBlockProps> = (props) => {
 
                 <a
                     className={'text-t-medium px-[50px] py-[20px] bg-blue-button rounded-[54px] w-fit hover:bg-blue z-[2]'}
-                    href={TELEGRAM_LINK}
+                    href={config.telegramBlock.link}
                     target={'_blank'}
                     rel={'noopener noreferrer'}
                 >
