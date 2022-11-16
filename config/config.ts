@@ -6,5 +6,9 @@ export const config = {
     },
     telegramBlock: {
         link: 'https://t.me/+xyZ7jCIe421lODJi'
+    },
+    cookieNotice: {
+        cookiesAllowedName: 'cookies_allowed',
+        expires: 1000 * 60 * 60 * 24 * 30 * 6,
     }
 }

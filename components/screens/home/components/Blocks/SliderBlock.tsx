@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { SOLDR, SOLDRAdvantages } from '../../../../../config/SOLDR';
 import CircleNextFillIcon from '../assets/circle-next-fill.svg';
 
-export interface SliderBlockProps {
+export type SliderBlockProps = {
     className?: string;
     onSelectAdvantage?: (advantage: SOLDRAdvantages) => void;
 }

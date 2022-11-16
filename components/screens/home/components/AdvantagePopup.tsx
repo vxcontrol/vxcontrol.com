@@ -5,7 +5,7 @@ import CloseIcon from './assets/close.svg';
 import { SOLDRPlans } from '../../../../config/SOLDRPlans';
 import { useHotkey } from '../../../../hooks/use-hotkey';
 
-export interface AdvantagePopupProps {
+export type AdvantagePopupProps = {
     className?: string;
     advantage?: SOLDRAdvantages;
     onClose?: () => void;

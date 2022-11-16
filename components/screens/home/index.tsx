@@ -8,6 +8,7 @@ import { DownloadBlock } from '@/components/screens/home/components/Blocks/Downl
 import { SliderBlock } from '@/components/screens/home/components/Blocks/SliderBlock';
 import { SOLDRAdvantages } from '../../../config/SOLDR';
 import { AdvantagePopup } from '@/components/screens/home/components/AdvantagePopup';
+import { CookieNotice } from '@/components/CookieNotice';
 
 export type HomeScreenProps = {
 }
@@ -32,6 +33,8 @@ export const HomeScreen: FC<HomeScreenProps> = (props) => {
             {selectedAdvantage !== undefined && (
                 <AdvantagePopup advantage={selectedAdvantage} onClose={() => setSelectedAdvantage(undefined)} />
             )}
+
+            <CookieNotice />
         </>
     );
 }
