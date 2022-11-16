@@ -4,4 +4,8 @@
 
 body {
     @apply bg-main-dark text-main-light;
+
+    p + p {
+        margin-top: 32px;
+    }
 }

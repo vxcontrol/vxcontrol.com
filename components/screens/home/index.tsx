@@ -29,7 +29,9 @@ export const HomeScreen: FC<HomeScreenProps> = (props) => {
 
             <Footer className={'bg-panel'} />
 
-            <AdvantagePopup open={selectedAdvantage !== undefined} advantage={selectedAdvantage} onClose={() => setSelectedAdvantage(undefined)} />
+            {selectedAdvantage !== undefined && (
+                <AdvantagePopup advantage={selectedAdvantage} onClose={() => setSelectedAdvantage(undefined)} />
+            )}
         </>
     );
 }
