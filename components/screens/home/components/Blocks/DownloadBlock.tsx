@@ -30,7 +30,7 @@ export const DownloadBlock: FC<DownloadBlockProps> = (props) => {
                     </div>
 
                     <a
-                        className={'flex items-center text-t-medium px-[40px] py-[20px] bg-main-dark rounded-[54px] w-fit'}
+                        className={'flex items-center text-t-medium px-[40px] py-[20px] bg-main-dark rounded-[54px] w-fit hover:drop-shadow-hover-simple'}
                         href={GITHUB_LINK}
                         target={'_blank'}
                         rel={'noopener noreferrer'}

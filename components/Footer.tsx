@@ -22,7 +22,7 @@ export const Footer: FC<FooterProps> = (props) => {
                         <PhoneIcon />
 
                         <a
-                            className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-non-standard-blue2'}
+                            className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}
                             href={`tel:${PHONE_NUMBER}`}
                             target={'_blank'}
                             rel={'noopener noreferrer'}
@@ -36,7 +36,7 @@ export const Footer: FC<FooterProps> = (props) => {
                         <MailIcon />
 
                         <a
-                            className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-non-standard-blue2'}
+                            className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}
                             href={`mailto:${EMAIL}`}
                             target={'_blank'}
                             rel={'noopener noreferrer'}
@@ -55,7 +55,7 @@ export const Footer: FC<FooterProps> = (props) => {
                 </div>
 
                 <div className={'ml-auto flex items-end mobile:justify-center mobile:ml-0'}>
-                    <Link href={'/cookies-notice'} className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-non-standard-blue2'}>
+                    <Link href={'/cookies-notice'} className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}>
                         Политика обработки cookies
                     </Link>
                 </div>

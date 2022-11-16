@@ -16,7 +16,9 @@ export const LocaleLink: FC<LocaleLinkProps> = ({ className, locale }) => {
         <Link
             className={classNames(
                 className,
-                'font-bold uppercase border border-main-light-gray px-[32px] py-[10px] rounded-[54px] text-main-light-gray', locale === currentLocale && 'bg-main-light-gray text-main-dark'
+                'font-bold uppercase border border-main-light-gray px-[32px] py-[10px] rounded-[54px] text-main-light-gray',
+                'hover:text-hover hover:border-hover',
+                locale === currentLocale && 'bg-main-light-gray text-main-dark pointer-events-none',
             )}
             href={'/'}
             locale={locale}

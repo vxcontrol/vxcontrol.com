@@ -23,7 +23,7 @@ export const TelegramBlock: FC<TelegramBlockProps> = (props) => {
                 </div>
 
                 <a
-                    className={'text-t-medium px-[50px] py-[20px] bg-non-standard-blue rounded-[54px] w-fit'}
+                    className={'text-t-medium px-[50px] py-[20px] bg-blue-button rounded-[54px] w-fit hover:bg-blue'}
                     href={TELEGRAM_LINK}
                     target={'_blank'}
                     rel={'noopener noreferrer'}

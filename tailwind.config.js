@@ -48,11 +48,16 @@ module.exports = {
                     'light-gray': '#9995B0',
                 },
                 panel: '#2a2746',
-                'non-standard': {
-                    blue: '#0a97fe',
-                    blue2: '#1583e9'
-                }
+                'blue-button': '#0a97fe',
+                blue: '#005fee',
+                hover: '#cccddd',
             },
+            dropShadow: {
+                'hover-simple': [
+                    '0px 2px 10px rgba(21, 233, 233, 0.59)',
+                    '0px 10px 30px rgba(21, 68, 233, 0.6)'
+                ],
+            }
         },
     },
     plugins: [
