@@ -1,4 +1,4 @@
-import 'styles/globals.css';
+import '@/styles/globals.scss';
 import { type ReactNode } from 'react';
 
 interface RootLayoutProps {
@@ -6,7 +6,7 @@ interface RootLayoutProps {
 }
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
-        <html lang="en">
+        <html lang="ru">
             <head />
             <body>{children}</body>
         </html>
