@@ -39,18 +39,19 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
             <div className={classNames(
                 className,
                 'bg-main-dark relative p-[60px]',
-                'w-[100vw] h-[100vh]',
-                'small:p-[40px]',
-                'mobile:p-[20px]',
-                'large:max-w-[1280px] large:max-h-[632px] large:m-auto large:rounded-[20px]',
-                'x-large:max-w-[1280px] x-large:max-h-[632px] x-large:m-auto x-large:rounded-[20px]',
+                'w-[100vw]',
+                'small:p-[40px] small:h-[100vh] flex',
+                'mobile:p-[20px] mobile:h-[100vh] flex',
+                'medium:h-[100vh] flex',
+                'large:max-w-[1024px] large:m-auto large:rounded-[20px]',
+                'x-large:max-w-[1280px] x-large:m-auto x-large:rounded-[20px]',
             )}>
-                <div className={'flex small:flex-col mobile:flex-col'}>
-                    <div className={'w-[60%] flex items-center justify-center'}>
+                <div className={'flex small:flex-col mobile:flex-col small:items-center mobile:items-center small:my-auto mobile:my-auto'}>
+                    <div className={'x-large:w-[60%] large:w-[60%] w-[50%] flex items-center justify-center small:w-full mobile:w-full'}>
                         {SOLDRPlans[advantage]}
                     </div>
 
-                    <div className={'w-[40%] flex flex-col justify-center'}>
+                    <div className={'x-large:w-[40%] large:w-[40%] w-[50%] flex flex-col justify-center small:w-full mobile:w-full'}>
                         <h1 className={'text-h-medium-x medium:h-small-x small:h-small-x mobile:h-small-x mb-4'}>
                             {SOLDR[advantage].name}
                         </h1>
