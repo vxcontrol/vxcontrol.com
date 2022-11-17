@@ -24,6 +24,10 @@ const securityHeaders = [
     }
 ];
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: process.env.ANALYZE === 'true'
+});
+
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
@@ -48,4 +52,4 @@ const nextConfig = {
     }
 };
 
-module.exports = nextTranslate(nextConfig);
+module.exports = withBundleAnalyzer(nextTranslate(nextConfig));
