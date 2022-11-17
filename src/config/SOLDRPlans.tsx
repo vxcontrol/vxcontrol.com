@@ -1,30 +1,31 @@
 import { SOLDRAdvantages } from './SOLDR';
 import { ReactNode } from 'react';
+import NextImage from 'next/image';
 
-import SystemRuIcon from './assets/system_ru.svg';
-import OrchestrationRuIcon from './assets/orchestration_ru.svg';
-import LifecycleControlRuIcon from './assets/lifecycle-control_ru.svg';
-import DetectionRuIcon from './assets/detection_ru.svg';
-import ResponseRuIcon from './assets/response_ru.svg';
-import SystemEnIcon from './assets/system_en.svg';
-import OrchestrationEnIcon from './assets/orchestration_en.svg';
-import LifecycleControlEnIcon from './assets/lifecycle-control_en.svg';
-import DetectionEnIcon from './assets/detection_en.svg';
-import ResponseEnIcon from './assets/response_en.svg';
+import systemRuImage from './assets/system_ru.png';
+import orchestrationRuImage from './assets/orchestration_ru.png';
+import lifecycleControlRuImage from './assets/lifecycle-control_ru.png';
+import detectionRuImage from './assets/detection_ru.png';
+import responseRuImage from './assets/response_ru.png';
+import systemEnImage from './assets/system_en.png';
+import orchestrationEnImage from './assets/orchestration_en.png';
+import lifecycleControlEnImage from './assets/lifecycle-control_en.png';
+import detectionEnImage from './assets/detection_en.png';
+import responseEnImage from './assets/response_en.png';
 
 export const SOLDRPlans: {ru: {[key in SOLDRAdvantages]: ReactNode}, en: {[key in SOLDRAdvantages]: ReactNode}} = {
     ru: {
-        system: <SystemRuIcon className={'w-full h-full'} />,
-        orchestration: <OrchestrationRuIcon className={'w-full h-full'} />,
-        lifecycleControl: <LifecycleControlRuIcon className={'w-full h-full'} />,
-        detection: <DetectionRuIcon className={'w-full h-full'} />,
-        response: <ResponseRuIcon className={'w-full h-full'} />,
+        system: <NextImage src={systemRuImage} />,
+        orchestration: <NextImage src={orchestrationRuImage} />,
+        lifecycleControl: <NextImage src={lifecycleControlRuImage} />,
+        detection: <NextImage src={detectionRuImage} />,
+        response: <NextImage src={responseRuImage} />,
     },
     en: {
-        system: <SystemEnIcon className={'w-full h-full'} />,
-        orchestration: <OrchestrationEnIcon className={'w-full h-full'} />,
-        lifecycleControl: <LifecycleControlEnIcon className={'w-full h-full'} />,
-        detection: <DetectionEnIcon className={'w-full h-full'} />,
-        response: <ResponseEnIcon className={'w-full h-full'} />,
+        system: <NextImage src={systemEnImage} />,
+        orchestration: <NextImage src={orchestrationEnImage} />,
+        lifecycleControl: <NextImage src={lifecycleControlEnImage} />,
+        detection: <NextImage src={detectionEnImage} />,
+        response: <NextImage src={responseEnImage} />,
     }
 }

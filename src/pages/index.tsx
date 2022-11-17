@@ -11,7 +11,7 @@ const IndexPage = ({ locale, title, description, }) => {
             <HomeScreen />
         </>
     );
-}; 
+};
 
 export default IndexPage;
 
