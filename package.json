@@ -40,9 +40,9 @@
     },
     "dependencies": {
         "js-cookie": "^3.0.1",
-        "next": "^12.3.3",
+        "next": "12.3.3",
         "next-translate": "1.3.3",
-        "react": "^18.2.0",
+        "react": "18.2.0",
         "react-dom": "^18.2.0",
         "sass": "^1.56.1",
         "tailwindcss-animate": "^1.0.5"

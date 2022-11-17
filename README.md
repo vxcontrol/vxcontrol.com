@@ -1,4 +1,6 @@
-# vxcontrol.com
+# vxcontrol.com Website
+[![Package - react](https://img.shields.io/github/package-json/dependency-version/vxcontrol/vxcontrol.com/react?color=blue)](https://www.npmjs.com/package/react)
+[![Package - next](https://img.shields.io/github/package-json/dependency-version/vxcontrol/vxcontrol.com/next?color=blue)](https://www.npmjs.com/package/next)
 
 
 # Getting started
