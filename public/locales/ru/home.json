@@ -1,4 +1,6 @@
 {
     "meta_title": "SOLDR — новый подход к защите конечных устройств",
-    "meta_description": "System of Orchestration, Lifecycle Сontrol, Detection and Response — первое российское решение класса EDR с открытым исходным кодом"
+    "meta_description": "System of Orchestration, Lifecycle Сontrol, Detection and Response — первое российское решение класса EDR с открытым исходным кодом",
+    "hero_title": "System of Orchestration, Lifecycle Сontrol, Detection and Response",
+    "hero_description": "<p>Новый подход к защите конечных устройств и молниеносная реакция на угрозы.</p><p>Инновационный продукт класса EDR с открытым исходным кодом. Позволяет самостоятельно добавлять новые функции и управлять ими в одном интерфейсе.<p>"
 }

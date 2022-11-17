@@ -1,11 +1,14 @@
 import React, { FC } from 'react';
 import SOLDRIcon from '../assets/SOLDR.svg';
 import { LocaleLink } from '../LocaleLink';
+import useTranslation from 'next-translate/useTranslation';
 
 export type HeroBlockProps = {}
 
 export const HeroBlock: FC<HeroBlockProps> = (props) => {
     const {} = props;
+
+    const { t } = useTranslation('home');
 
     return (
         <>
@@ -20,11 +23,12 @@ export const HeroBlock: FC<HeroBlockProps> = (props) => {
                         <LocaleLink locale={'en'} className={'mobile:w-full text-center'} />
                     </div>
                     <h1 className={'col-span-2 flex flex-col text-h-base mb-8 large:text-h-medium medium:text-h-medium small:text-h-medium mobile:text-h-small mobile:mb-4'}>
-                        System of Orchestration Lifecycle Control Detection and Response
+                        {t('hero_title')}
                     </h1>
-                    <div className={'col-span-2 text-t-base text-main-light-gray large:text-t-medium medium:text-t-medium small:text-t-medium mobile:text-t-medium'}>
-                        Первое российское решение класса EDR с открытым исходным кодом. Новый подход к защите конечных устройств и молниеносная реакция на угрозы.
-                    </div>
+                    <div
+                        className={'col-span-2 text-t-base text-main-light-gray large:text-t-medium medium:text-t-medium small:text-t-medium mobile:text-t-medium'}
+                        dangerouslySetInnerHTML={{ __html: t('hero_description') }}
+                    />
                 </div>
             </section>
         </>
