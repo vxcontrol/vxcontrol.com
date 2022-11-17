@@ -41,17 +41,17 @@ export const CookieNoticeScreen: FC<CookieNoticeScreenProps> = (props) => {
                                     </thead>
                                     <tbody>
                                     <tr className={'bg-panel'}>
-                                        <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover border-main-dark border-r-2'}>.standoff365.com</td>
+                                        <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover border-main-dark border-r-2'}>vxcontrol.com</td>
                                         <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover border-main-dark border-r-2'}>_ym_isad</td>
                                         <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover border-main-dark border-r-2'}>3rd party</td>
                                     </tr>
                                     <tr>
-                                        <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover'}>.standoff365.com</td>
+                                        <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover'}>vxcontrol.com</td>
                                         <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover'}>_ym_d</td>
                                         <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover'}>3rd party</td>
                                     </tr>
                                     <tr className={'bg-panel'}>
-                                        <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover border-main-dark border-r-2'}>.standoff365.com</td>
+                                        <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover border-main-dark border-r-2'}>vxcontrol.com</td>
                                         <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover border-main-dark border-r-2'}>_ym_uid</td>
                                         <td className={'pr-5 pl-5 pt-2.5 pb-2.5 text-lg text-hover border-main-dark border-r-2'}>3rd party</td>
                                     </tr>
