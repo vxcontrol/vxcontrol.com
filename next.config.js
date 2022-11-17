@@ -1,3 +1,5 @@
+const nextTranslate = require('next-translate');
+
 /** @type {import('next').NextConfig} */
 const securityHeaders = [
     {
@@ -35,24 +37,6 @@ const nextConfig = {
         });
         return config;
     },
-    i18n: {
-        locales: ['ru', 'en'],
-        defaultLocale: 'ru',
-        localeDetection: false,
-        domains: [
-            {
-                domain: 'vxcontrol.ru',
-                defaultLocale: 'ru',
-                // an optional http field can also be used to test
-                // locale domains locally with http instead of https
-                http: true
-            },
-            {
-                domain: 'vxcontrol.com',
-                defaultLocale: 'en'
-            }
-        ]
-    },
     async headers() {
         return [
             {
@@ -63,4 +47,4 @@ const nextConfig = {
     }
 };
 
-module.exports = nextConfig;
+module.exports = nextTranslate(nextConfig);
