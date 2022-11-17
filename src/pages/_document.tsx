@@ -12,7 +12,7 @@ export default class AppDocument extends Document {
 
     render() {
         return (
-            <Html lang="ru">
+            <Html lang={this.props.locale}>
                 <Head>
                     <meta charSet="utf-8" />
                     <meta name="viewport" content="width=device-width" />
