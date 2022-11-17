@@ -1,20 +1,18 @@
 'use client'
 
 import React, { FC, useState } from 'react';
-import { HeroBlock } from '@/components/screens/home/components/Blocks/HeroBlock';
-import { TelegramBlock } from '@/components/screens/home/components/Blocks/TelegramBlock';
-import { Footer } from '@/components/Footer';
-import { DownloadBlock } from '@/components/screens/home/components/Blocks/DownloadBlock';
-import { SliderBlock } from '@/components/screens/home/components/Blocks/SliderBlock';
+import { HeroBlock } from './components/Blocks/HeroBlock';
+import { TelegramBlock } from './components/Blocks/TelegramBlock';
+import { Footer } from '../../Footer';
+import { DownloadBlock } from './components/Blocks/DownloadBlock';
+import { SliderBlock } from './components/Blocks/SliderBlock';
 import { SOLDRAdvantages } from '../../../config/SOLDR';
-import { AdvantagePopup } from '@/components/screens/home/components/AdvantagePopup';
-import { CookieNotice } from '@/components/CookieNotice';
+import { AdvantagePopup } from './components/AdvantagePopup';
 
-export type HomeScreenProps = {
-}
+export type HomeScreenProps = {}
 
 export const HomeScreen: FC<HomeScreenProps> = (props) => {
-    const {} = props;
+    const { } = props;
 
     const [selectedAdvantage, setSelectedAdvantage] = useState<SOLDRAdvantages>();
 
@@ -33,8 +31,6 @@ export const HomeScreen: FC<HomeScreenProps> = (props) => {
             {selectedAdvantage !== undefined && (
                 <AdvantagePopup advantage={selectedAdvantage} onClose={() => setSelectedAdvantage(undefined)} />
             )}
-
-            <CookieNotice />
         </>
     );
 }

@@ -53,8 +53,8 @@ export const Footer: FC<FooterProps> = (props) => {
                 </div>
 
                 <div className={'ml-auto flex items-end mobile:justify-center mobile:ml-0'}>
-                    <Link href={'/cookies-notice'} className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}>
-                        Политика обработки cookies
+                    <Link href={'/cookies-notice'}>
+                        <a className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}>Политика обработки cookies</a>
                     </Link>
                 </div>
             </div>

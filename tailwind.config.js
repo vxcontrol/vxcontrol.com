@@ -3,8 +3,9 @@ const { colors } = require('tailwindcss/colors')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        './app/**/*.{ts,tsx}',
-        './components/**/*.{ts,tsx}'
+        './src/pages/**/*.{ts,tsx}',
+        './src/components/**/*.{ts,tsx}',
+        './src/components/*.{ts,tsx}',
     ],
     theme: {
         screens: {

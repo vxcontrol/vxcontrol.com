@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import SOLDRIcon from '../assets/SOLDR.svg';
-import { LocaleLink } from '@/components/screens/home/components/LocaleLink';
+import { LocaleLink } from '../LocaleLink';
 
 export type HeroBlockProps = {}
 

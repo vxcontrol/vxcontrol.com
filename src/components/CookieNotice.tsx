@@ -42,7 +42,11 @@ export const CookieNotice: FC<CookieNoticeProps> = (props) => {
             </h1>
 
             <div className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x mb-[32px]'}>
-                Мы используем куки. Оставаясь на сайте, вы соглашаетесь <Link className={'text-main-light-gray hover:text-hover'} href={'/cookie-notice'}>с условиями их использования</Link>
+                Мы используем куки. Оставаясь на сайте, вы соглашаетесь <Link href={'/cookie-notice'}>
+                    <a className={'text-main-light-gray hover:text-hover'}>
+                        с условиями их использования
+                    </a>
+                </Link>
             </div>
 
             <button
