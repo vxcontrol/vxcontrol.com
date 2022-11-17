@@ -1,32 +1,32 @@
 {
     "meta_title": "SOLDR: a new approach to endpoint protection",
-    "meta_description": "System of Orchestration, Lifecycle Сontrol, Detection and Response — первое российское решение класса EDR с открытым исходным кодом",
+    "meta_description": "System of Orchestration, Lifecycle Сontrol, Detection and Response — a new approach to endpoint protection and swift response to threats",
     "hero_title": "System of Orchestration, Lifecycle Сontrol, Detection and Response",
-    "hero_description": "<p>Новый подход к защите конечных устройств и молниеносная реакция на угрозы.</p><p>Инновационный продукт класса EDR с открытым исходным кодом. Позволяет самостоятельно добавлять новые функции и управлять ими в одном интерфейсе.<p>",
-    "telegram_title": "Телеграм - канал о SOLDR",
-    "telegram_description": "Узнать больше о продукте и задать вопрос экспертам можно в чате",
-    "telegram_link": "Перейти",
-    "download_title": "Скачайте SOLDR с GitHub",
-    "download_description": "Оцените возможности SOLDR, скачав его тестовую версию",
-    "download_link": "Перейти на github",
+    "hero_description": "<p>A new approach to endpoint protection and swift response to threats.</p><p>An innovative open-source EDR solution. Allows you to add and manage new functions in a single interface.<p>",
+    "telegram_title": "SOLDR chat in Telegram",
+    "telegram_description": "You can learn more about the product and ask experts questions in the chat.",
+    "telegram_link": "Join",
+    "download_title": "Download SOLDR on GitHub",
+    "download_description": "Download a test version of SOLDR and explore the possibilities of the product",
+    "download_link": "Go to GitHub",
 
     "system_name": "System",
-    "system_shortDescription": "Коробочная система с клиент-серверной архитектурой для построения эшелонированной защиты IT-инфраструктуры от сложных целевых атак, для сбора информации и расследования инцидентов",
-    "system_description": "<p>Защищает конечные устройства на Windows, Linux и macOS с помощью клиентского приложения — агента (исходный код написан на языках Go, Lua и С). Механизм защиты выстраивается политикой безопасности, которую агент получает с сервера.</p><p>Основные функции продукта выполняются модулями, которые разрабатываются на языке Lua. Для включения библиотек в состав сборки используется плагинная система luapower. Разработку и отладку модулей можно вести непосредственно в веб-интерфейсе системы.</p>",
+    "system_shortDescription": "Out-of-the-box system with client-server architecture to investigate incidents, collect information, and protect IT infrastructure from complex targeted attacks",
+    "system_description": "<p>Protects endpoints on Windows, Linux, and macOS with the help of an agent, the client application (the source code is written in Go, Lua, and C). The protection mechanism is based on the security policy that the agent receives from the server.</p><p>The main product functions are performed by modules developed in Lua. The luapower plugin system is used to include libraries in the assembly. Modules can be developed and debugged directly in the system web interface.</p>",
 
     "orchestration_name": "Orchestration",
-    "orchestration_shortDescription": "Собственные механизмы доставки политик безопасности и стороннего ПО на конечные устройства",
-    "orchestration_description": "<p>Вы можете удаленно управлять конфигурацией модулей и операционной системы на конечном устройстве. Кроме того, наши технологии доставки контента позволяют устанавливать и настраивать стороннее ПО, например Sysmon.</p><p>Возможности SOLDR в управлении конфигурациями сопоставимы с возможностями лидирующих решений в этой области, таких как Puppet, SaltStack или Chef, что позволяет IT-команде отказаться от использования этих систем в организации.</p>",
+    "orchestration_shortDescription": "In-house mechanisms for delivering security policies and third-party software to endpoints",
+    "orchestration_description": "<p>You can remotely control the configuration of modules and operating system on an end device. In addition, our content delivery technologies allow you to install and configure third-party software such as Sysmon.</p><p>SOLDR's configuration management capabilities are comparable to those of leading solutions in this field, such as Puppet, SaltStack, and Chef. This allows IT teams to stop using these systems.</p>",
 
     "lifecycleControl_name": "Lifecycle Control",
-    "lifecycleControl_shortDescription": "Мониторинг систем, обеспечивающих бизнес-процессы, и оперативное вмешательство при возникновении угроз безопасности",
-    "lifecycleControl_description": "<p>SOLDR может взаимодействовать с любой системой, обеспечивающей построение бизнес-процессов, и при необходимости точечно вмешиваться в ее конфигурацию.</p><p>Позволяет анализировать журналы, собирать ключевые показатели и визуализировать полученные данные с помощью Jaeger, Elasticsearch, VictoriaMetrics и Grafana.</p>",
+    "lifecycleControl_shortDescription": "Monitoring of systems supporting business processes and prompt intervention in case of security threats",
+    "lifecycleControl_description": "<p>SOLDR can interact with any system that supports the building of business processes and, if necessary, modify its configuration.</p><p>Allows you to analyze logs, collect key metrics, and visualize the obtained data using Jaeger, Elasticsearch, VictoriaMetrics, and Grafana.</p>",
 
     "detection_name": "Detection",
-    "detection_shortDescription": "Сбор и анализ данных с конечного устройства, верификация сработок и подтверждение факта атаки",
-    "detection_description": "<p>SOLDR анализирует огромные массивы необработанных данных из операционной системы и средств защиты, обнаруживает вредоносную или подозрительную активность и регистрирует события ИБ.</p><p>За выявление угроз на конечном устройстве отвечает коррелятор, который выполняет нормализацию, агрегацию и корреляцию потока необработанных событий. Все подозрительные файлы и процессы могут быть проверены с помощью сигнатурного анализа на основе YARA-правил.</p>",
+    "detection_shortDescription": "Endpoint data collection and analysis, triggering verification, and attack confirmation",
+    "detection_description": "<p>SOLDR analyzes vast amounts of raw data from the operating system and protection tools, detects malicious or suspicious activity, and logs information security events.</p><p>A correlator performs normalization, aggregation, and correlation of raw events and detects threats on endpoints. All suspicious files and processes can be verified using signature analysis based on YARA rules.</p>",
 
     "response_name": "Response",
-    "response_shortDescription": "Быстрая и сокрушительная реакция на хакерские атаки",
-    "response_description": "<p>В отличие от систем предыдущего поколения, SOLDR быстрее выявляет действия хакера и реагирует на атаки с меньшими затратами, учитывая при этом специфические для организации риски.</p><p>На каждое опасное событие ИБ могут быть назначены автоматические действия, такие как удаление файла, завершение процесса или изоляция узла. Если есть риск потери ценных данных, вместо автоматических действий может применяться ручное реагирование.</p>"
+    "response_shortDescription": "Quick and crushing response to hacker attacks",
+    "response_description": "<p>Compared to previous generation systems, SOLDR detects attacker actions quicker and responds to attacks using less resources, while taking into account organization-specific risks.</p><p>Automatic actions can be configured to respond to each dangerous security event: deleting a file, terminating a process, or isolating a host. If there is a risk of losing precious data, manual response may be used instead of automatic actions.</p>"
 }
