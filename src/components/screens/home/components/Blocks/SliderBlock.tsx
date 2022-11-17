@@ -10,6 +10,7 @@ import DIcon from '../assets/D.svg';
 import RIcon from '../assets/R.svg';
 import LeftArrowIcon from '../assets/left-arrow.svg';
 import RightArrowIcon from '../assets/right-arrow.svg';
+import useTranslation from 'next-translate/useTranslation';
 
 export type SliderBlockProps = {
     className?: string;
@@ -18,6 +19,8 @@ export type SliderBlockProps = {
 
 export const SliderBlock: FC<SliderBlockProps> = (props) => {
     const { className, onSelectAdvantage } = props;
+
+    const { t } = useTranslation('home');
 
     const scrollContainerRef = useRef<HTMLUListElement>(null);
 
@@ -72,7 +75,7 @@ export const SliderBlock: FC<SliderBlockProps> = (props) => {
                 'ml-[80px] medium:ml-[40px] small:ml-[40px] mobile:ml-[20px]',
                 styles.hideScrollbars
             )}>
-                {Object.keys(SOLDR).map((key: SOLDRAdvantages) => (
+                {SOLDR.map((key: SOLDRAdvantages) => (
                     <li key={key} className={'flex cursor-pointer items-center mobile:flex-col'} onClick={() => onSelectAdvantage?.(key)}>
                         <div>
                             {key === 'system' && <SIcon />}
@@ -88,22 +91,14 @@ export const SliderBlock: FC<SliderBlockProps> = (props) => {
                             'mobile:pl-[16px]'
                         )}>
                             <h1 className={'flex items-center text-h-small-x medium:text-t-medium small:text-t-medium mobile:text-t-medium mb-[12px]'}>
-                                <span className={'mr-3'}>{SOLDR[key].name}</span>
+                                <span className={'mr-3'}>{t(`${key}_name`)}</span>
                                 <CircleNextFillIcon />
                             </h1>
 
                             <div className={'text-main-light-gray text-t-medium medium:text-t-small small:text-t-small mobile:text-t-small'}>
-                                {SOLDR[key].shortDescription}
+                                {t(`${key}_shortDescription`)}
                             </div>
                         </div>
-
-                        {/*<button*/}
-                        {/*    className={'flex items-center text-base'}*/}
-                        {/*    onClick={() => onSelectAdvantage?.(key)}*/}
-                        {/*>*/}
-                        {/*    <span className={'mr-3'}>{SOLDR[key].name}</span>*/}
-                        {/*    <CircleNextFillIcon />*/}
-                        {/*</button>*/}
                     </li>
                 ))}
             </ul>

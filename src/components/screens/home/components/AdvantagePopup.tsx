@@ -1,9 +1,10 @@
 import React, { FC, useEffect } from 'react';
 import classNames from 'classnames';
-import { SOLDR, SOLDRAdvantages } from '../../../../config/SOLDR';
+import { SOLDRAdvantages } from '../../../../config/SOLDR';
 import CloseIcon from './assets/close.svg';
 import { SOLDRPlans } from '../../../../config/SOLDRPlans';
 import { useHotkey } from '../../../../hooks/use-hotkey';
+import useTranslation from 'next-translate/useTranslation';
 
 export type AdvantagePopupProps = {
     className?: string;
@@ -17,6 +18,8 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
         advantage,
         onClose,
     } = props;
+
+    const { t, lang } = useTranslation('home');
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -48,16 +51,16 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
             )}>
                 <div className={'flex small:flex-col mobile:flex-col small:items-center mobile:items-center small:my-auto mobile:my-auto'}>
                     <div className={'x-large:w-[60%] large:w-[60%] w-[50%] flex items-center justify-center small:w-full mobile:w-full'}>
-                        {SOLDRPlans[advantage]}
+                        {SOLDRPlans[lang][advantage]}
                     </div>
 
                     <div className={'x-large:w-[40%] large:w-[40%] w-[50%] flex flex-col justify-center small:w-full mobile:w-full'}>
                         <h1 className={'text-h-medium-x medium:h-small-x small:h-small-x mobile:h-small-x mb-4'}>
-                            {SOLDR[advantage].name}
+                            {t(`${advantage}_name`)}
                         </h1>
                         <div
                             className={'text-t-medium medium:t-small small:t-small mobile:t-small text-main-light-gray'}
-                            dangerouslySetInnerHTML={{ __html: SOLDR[advantage].description }}
+                            dangerouslySetInnerHTML={{ __html: t(`${advantage}_description`) }}
                         />
                     </div>
                 </div>
