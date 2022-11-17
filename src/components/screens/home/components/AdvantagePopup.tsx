@@ -58,8 +58,8 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
                             'absolute w-[80%] h-full flex items-center justify-center z-[1]',
                             animations.planBackDrop,
                         )}>
-                            <div className={'w-[40%] h-[30%] bg-[#a716ff]'} />
-                            <div className={'w-[40%] h-[30%] bg-[#1657ff]'} />
+                            <div className={'w-[40%] h-[30%]'} />
+                            <div className={'w-[40%] h-[30%]'} />
                         </div>
                     </div>
 

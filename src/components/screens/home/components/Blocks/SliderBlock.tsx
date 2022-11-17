@@ -3,14 +3,16 @@ import classNames from 'classnames';
 import styles from '../../../../../styles/styles.module.scss';
 import { SOLDR, SOLDRAdvantages } from '../../../../../config/SOLDR';
 import CircleNextFillIcon from '../assets/circle-next-fill.svg';
-import SIcon from '../assets/S.svg';
-import OIcon from '../assets/O.svg';
-import LIcon from '../assets/L.svg';
-import DIcon from '../assets/D.svg';
-import RIcon from '../assets/R.svg';
+import letterSImage from '../assets/S.png';
+import letterOImage from '../assets/O.png';
+import letterLImage from '../assets/L.png';
+import letterDImage from '../assets/D.png';
+import letterRImage from '../assets/R.png';
 import LeftArrowIcon from '../assets/left-arrow.svg';
 import RightArrowIcon from '../assets/right-arrow.svg';
 import useTranslation from 'next-translate/useTranslation';
+import NextImage from 'next/image';
+import animations from '../../../../../styles/animations.module.scss';
 
 export type SliderBlockProps = {
     className?: string;
@@ -72,17 +74,29 @@ export const SliderBlock: FC<SliderBlockProps> = (props) => {
                 ref={scrollContainerRef}
                 className={classNames(
                 'relative flex overflow-x-scroll items-center gap-4 mobile:gap-6',
-                'ml-[80px] medium:ml-[40px] small:ml-[40px] mobile:ml-[20px]',
+                // 'ml-[80px] medium:ml-[40px] small:ml-[40px] mobile:ml-[20px]',
+                'pl-[80px] medium:pl-[40px] small:pl-[40px] mobile:pl-[20px] py-[55px] mobile:pt-[85px]',
                 styles.hideScrollbars
             )}>
                 {SOLDR.map((key: SOLDRAdvantages) => (
                     <li key={key} className={'flex cursor-pointer items-center mobile:flex-col'} onClick={() => onSelectAdvantage?.(key)}>
-                        <div>
-                            {key === 'system' && <SIcon />}
-                            {key === 'orchestration' && <OIcon />}
-                            {key === 'lifecycleControl' && <LIcon />}
-                            {key === 'detection' && <DIcon />}
-                            {key === 'response' && <RIcon />}
+                        <div className={'relative'}>
+                            {key === 'system' && <div className={'w-[105px]'}><NextImage src={letterSImage} style={{ zIndex: '2' }} /></div>}
+                            {key === 'orchestration' && <div className={'w-[125px]'}><NextImage src={letterOImage} style={{ zIndex: '2' }} /></div>}
+                            {key === 'lifecycleControl' && <div className={'w-[91px]'}><NextImage src={letterLImage} style={{ zIndex: '2' }} /></div>}
+                            {key === 'detection' && <div className={'w-[117px]'}><NextImage src={letterDImage} style={{ zIndex: '2' }} /></div>}
+                            {key === 'response' && <div className={'w-[105px]'}><NextImage src={letterRImage} style={{ zIndex: '2' }} /></div>}
+
+                            <div
+                                {...{ [key]: '' }}
+                                className={classNames(
+                                'absolute flex items-center justify-center z-[1]',
+                                animations.SOLDRLetterBackDrop,
+                            )}>
+                                <div className={'w-[80px] h-[80px]'} />
+                                <div className={'w-[100px] h-[100px]'} />
+                                <div className={'w-[80px] h-[80px]'} />
+                            </div>
                         </div>
 
                         <div className={classNames(

@@ -5,10 +5,129 @@
 
     div:first-child {
         transform: translateY(-35px) rotate(15deg);
+
+        background-color: #a716ff;
     }
 
     div:last-child {
         transform: translateY(35px) rotate(15deg);
+
+        background-color: #1657ff;
+    }
+}
+
+.logoBackDrop {
+    filter: blur(80px);
+
+    animation:30s rotate infinite linear;
+
+    div:first-child {
+        transform: translateY(-35px) rotate(15deg);
+
+        background-color: #a716ff;
+    }
+
+    div:last-child {
+        transform: translateY(35px) rotate(15deg);
+
+        background-color: #1657ff;
+    }
+}
+
+.SOLDRLetterBackDrop {
+    filter: blur(30px);
+    animation:5s rotate infinite linear;
+
+    div:first-child {
+        transform: translateX(60px) translateY(-30px) rotate(-45deg);
+    }
+
+    div:not(:first-child):not(:last-child) {
+        z-index: 1;
+    }
+
+    div:last-child {
+        transform: translateX(-57px) translateY(30px);
+    }
+
+    &[system] {
+        @apply top-[2%] left-[-80%];
+
+        div:first-child {
+            background-color: #265aff;
+        }
+
+        div:not(:first-child):not(:last-child) {
+            background-color: #26ffe5;
+        }
+
+        div:last-child {
+            background-color: #fb26ff;
+        }
+    }
+
+    &[orchestration] {
+        @apply top-[12%] left-[-60%];
+
+        div:first-child {
+            background-color: #faff00;
+        }
+
+        div:not(:first-child):not(:last-child) {
+            background-color: #26ff97;
+        }
+
+        div:last-child {
+            background-color: #263cff;
+        }
+    }
+
+    &[lifecycleControl] {
+        @apply top-[12%] left-[-100%];
+
+        div:first-child {
+            background-color: #ff5a26;
+        }
+
+        div:not(:first-child):not(:last-child) {
+            background-color: #eeff26;
+        }
+
+        div:last-child {
+            background-color: #9326ff;
+        }
+    }
+
+    &[detection] {
+        @apply top-[12%] left-[-70%];
+
+        div:first-child {
+            background-color: #ff26e9;
+        }
+
+        div:not(:first-child):not(:last-child) {
+            background-color: #8000ff;
+        }
+
+        div:last-child {
+            background-color: #2656ff;
+        }
+    }
+
+    &[response] {
+        @apply top-[12%] left-[-84%];
+
+        div:first-child {
+            background-color: #00ffff;
+        }
+
+        div:not(:first-child):not(:last-child) {
+            background-color: #0038ff;
+        }
+
+        div:last-child {
+            background-color: #33ff00;
+        }
     }
 }
 

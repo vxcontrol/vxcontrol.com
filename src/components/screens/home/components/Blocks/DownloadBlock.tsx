@@ -25,10 +25,10 @@ export const DownloadBlock: FC<DownloadBlockProps> = (props) => {
                     <div className={classNames(
                         'absolute w-[125%] h-[125%] flex items-center justify-center z-[1]',
                         'top-[-15%] left-[-15%]',
-                        animations.planBackDrop,
+                        animations.logoBackDrop,
                     )}>
-                        <div className={'w-[40%] h-[30%] bg-[#a716ff]'} />
-                        <div className={'w-[40%] h-[30%] bg-[#1657ff]'} />
+                        <div className={'w-[40%] h-[30%]'} />
+                        <div className={'w-[40%] h-[30%]'} />
                     </div>
                 </div>
 
