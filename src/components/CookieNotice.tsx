@@ -65,7 +65,7 @@ export const CookieNotice: FC<CookieNoticeProps> = (props) => {
                     components={{
                         component: (
                             <a
-                                href={'/cookie-notice'}
+                                href={'/cookie-policy'}
                                 target={'_blank'}
                                 rel="noreferrer"
                                 className={

@@ -56,7 +56,7 @@ export const Footer: FC<FooterProps> = (props) => {
                 </div>
 
                 <div className={'ml-auto flex items-end mobile:justify-center mobile:ml-0'}>
-                    <Link href={'/cookie-notice'}>
+                    <Link href={'/cookie-policy'}>
                         <a className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}>{t('footer_cookies_policy_link')}</a>
                     </Link>
                 </div>

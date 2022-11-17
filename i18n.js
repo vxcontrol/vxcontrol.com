@@ -18,7 +18,7 @@ module.exports = {
     pages: {
         '*': ['common'],
         '/': ['home'],
-        '/cookies-notice': ['cookies-notice']
+        '/cookie-policy': ['cookies-notice']
     },
     interpolation: {
         prefix: '${',
