@@ -2,7 +2,7 @@ import { CookieNoticeScreen } from '../../components/screens/cookie-notice';
 import { GetServerSideProps } from 'next';
 import getT from 'next-translate/getT';
 
-const CookieNoticePage = async ({ title, description }) => {
+const CookieNoticePage = ({ title, description }) => {
     return <CookieNoticeScreen title={title} description={description} />;
 };
 

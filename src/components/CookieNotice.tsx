@@ -4,11 +4,15 @@ import Link from 'next/link';
 import Cookies from 'js-cookie';
 import { config } from '../config/config';
 import CloseIcon from './assets/close.svg';
+import useTranslation from 'next-translate/useTranslation';
+import Trans from 'next-translate/Trans';
 
 export type CookieNoticeProps = {}
 
 export const CookieNotice: FC<CookieNoticeProps> = (props) => {
     const {} = props;
+
+    const { t } = useTranslation('common');
 
     const [allowed, setAllowed] = useState<boolean>(true);
 
@@ -38,22 +42,23 @@ export const CookieNotice: FC<CookieNoticeProps> = (props) => {
             'mobile:w-[calc(100%_-_20px)] mobile:p-[20px] mobile:mr-[10px] mobile:mb-[10px] mobile:left-[10px]'
         )}>
             <h1 className={'text-h-small-x medium:text-t-medium small:text-t-medium mobile:text-t-medium mb-[12px]'}>
-                Уведомление о куки
+                {t('cookie_notice_popup_title')}
             </h1>
 
             <div className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x mb-[32px]'}>
-                Мы используем куки. Оставаясь на сайте, вы соглашаетесь <Link href={'/cookie-notice'}>
-                    <a className={'text-main-light-gray hover:text-hover'}>
-                        с условиями их использования
-                    </a>
-                </Link>
+                <Trans
+                    i18nKey="common:cookie_notice_popup_message"
+                    components={{
+                        component: <a href={'/cookie-notice'} target={'_blank'} rel="noreferrer" className={'text-main-light-gray hover:text-hover'} />,
+                    }}
+                />
             </div>
 
             <button
                 className={'text-t-medium px-[50px] py-[20px] bg-blue-button rounded-[54px] w-fit hover:bg-blue z-[2]'}
                 onClick={allow}
             >
-                Принять все
+                {t('cookie_notice_popup_allow_all')}
             </button>
 
             <button

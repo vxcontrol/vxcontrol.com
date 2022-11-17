@@ -4,6 +4,7 @@ import PhoneIcon from './assets/phone.svg';
 import MailIcon from './assets/mail.svg';
 import Link from 'next/link';
 import { config } from '../config/config';
+import useTranslation from 'next-translate/useTranslation';
 
 export type FooterProps = {
     className?: string;
@@ -11,6 +12,8 @@ export type FooterProps = {
 
 export const Footer: FC<FooterProps> = (props) => {
     const { className } = props;
+
+    const { t } = useTranslation('common');
 
     return (
         <footer className={classNames(className)}>
@@ -49,12 +52,12 @@ export const Footer: FC<FooterProps> = (props) => {
                     'flex items-center',
                     'mobile:text-center'
                 )}>
-                    AE, Dubai, Dubai World Trade Center, Dubai One Central The Offices 3, Level 3, Office 362-7
+                    {t('footer_address')}
                 </div>
 
                 <div className={'ml-auto flex items-end mobile:justify-center mobile:ml-0'}>
                     <Link href={'/cookies-notice'}>
-                        <a className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}>Политика обработки cookies</a>
+                        <a className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}>{t('footer_cookies_policy_link')}</a>
                     </Link>
                 </div>
             </div>

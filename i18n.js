@@ -16,6 +16,7 @@ module.exports = {
         }
     ],
     pages: {
+        '*': ['common'],
         '/': ['home'],
         '/cookies-notice': ['cookies-notice']
     },
