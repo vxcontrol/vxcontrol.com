@@ -9,7 +9,7 @@ const IndexPage = ({ title, description }) => {
 export default IndexPage;
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
-    const t = await getT(locale, 'common');
+    const t = await getT(locale, 'home');
 
     const title = t('meta_title');
     const description = t('meta_description');
