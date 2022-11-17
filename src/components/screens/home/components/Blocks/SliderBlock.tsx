@@ -75,7 +75,7 @@ export const SliderBlock: FC<SliderBlockProps> = (props) => {
                 className={classNames(
                 'relative flex overflow-x-scroll items-center gap-4 mobile:gap-6',
                 // 'ml-[80px] medium:ml-[40px] small:ml-[40px] mobile:ml-[20px]',
-                'pl-[80px] medium:pl-[40px] small:pl-[40px] mobile:pl-[20px] py-[55px] mobile:pt-[85px]',
+                'pl-[80px] medium:pl-[40px] small:pl-[40px] mobile:pl-[20px] py-[75px] mobile:pt-[85px]',
                 styles.hideScrollbars
             )}>
                 {SOLDR.map((key: SOLDRAdvantages) => (
