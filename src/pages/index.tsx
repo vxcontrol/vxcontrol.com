@@ -6,12 +6,12 @@ import { Meta } from '../components/Meta';
 const IndexPage = ({ locale, title, description, }) => {
     return (
         <>
-            <Meta title={title} description={description} locale={locale} url={''} siteName={''} />
+            <Meta title={title} description={description} locale={locale} siteName={title} />
 
             <HomeScreen />
         </>
     );
-};
+}; 
 
 export default IndexPage;
 

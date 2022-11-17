@@ -6,7 +6,7 @@ import { Meta } from '../../components/Meta';
 const CookieNoticePage = ({ locale, title, description }) => {
     return (
         <>
-            <Meta title={title} description={description} locale={locale} url={''} siteName={''} />
+            <Meta title={title} description={description} locale={locale} siteName={title} />
 
             <CookieNoticeScreen />;
         </>
