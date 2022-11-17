@@ -1,21 +1,12 @@
 import React, { FC } from 'react';
-import Head from 'next/head';
 
-export type CookieNoticeScreenProps = {
-    title: string;
-    description: string;
-}
+export type CookieNoticeScreenProps = {}
 
 export const CookieNoticeScreen: FC<CookieNoticeScreenProps> = (props) => {
-    const { title, description } = props;
+    const {} = props;
 
     return (
         <>
-            <Head>
-                <title>{title}</title>
-                <meta name="description" content={description} />
-            </Head>
-
             <h1>CookieNoticePage</h1>
         </>
     );

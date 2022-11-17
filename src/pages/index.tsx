@@ -1,9 +1,16 @@
 import { HomeScreen } from '../components/screens/home';
 import { GetServerSideProps } from 'next';
 import getT from 'next-translate/getT';
+import { Meta } from '../components/Meta';
 
-const IndexPage = ({ title, description }) => {
-    return <HomeScreen title={title} description={description} />
+const IndexPage = ({ locale, title, description, }) => {
+    return (
+        <>
+            <Meta title={title} description={description} locale={locale} url={''} siteName={''} />
+
+            <HomeScreen />
+        </>
+    );
 };
 
 export default IndexPage;
@@ -16,6 +23,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
 
     return {
         props: {
+            locale,
             title,
             description,
         },

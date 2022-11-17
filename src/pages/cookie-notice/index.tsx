@@ -1,9 +1,16 @@
 import { CookieNoticeScreen } from '../../components/screens/cookie-notice';
 import { GetServerSideProps } from 'next';
 import getT from 'next-translate/getT';
+import { Meta } from '../../components/Meta';
 
-const CookieNoticePage = ({ title, description }) => {
-    return <CookieNoticeScreen title={title} description={description} />;
+const CookieNoticePage = ({ locale, title, description }) => {
+    return (
+        <>
+            <Meta title={title} description={description} locale={locale} url={''} siteName={''} />
+
+            <CookieNoticeScreen />;
+        </>
+    );
 };
 
 export default CookieNoticePage;
@@ -16,6 +23,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
 
     return {
         props: {
+            locale,
             title,
             description,
         },

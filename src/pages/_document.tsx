@@ -16,12 +16,6 @@ export default class AppDocument extends Document {
                 <Head>
                     <meta charSet="utf-8" />
                     <meta name="viewport" content="width=device-width" />
-
-                    <meta property="og:type" content="website" />
-                    <meta property="og:url" content="" />
-                    <meta property="og:image" content="" />
-
-                    <link rel="icon" href="/favicons/icon.svg" type="image/svg+xml" />
                 </Head>
                 <body>
                 <Main />
