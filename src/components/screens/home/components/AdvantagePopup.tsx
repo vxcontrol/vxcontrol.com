@@ -1,5 +1,6 @@
 import React, { FC, useEffect } from 'react';
 import classNames from 'classnames';
+import animations from '../../../../styles/animations.module.scss';
 import { SOLDRAdvantages } from '../../../../config/SOLDR';
 import CloseIcon from './assets/close.svg';
 import { SOLDRPlans } from '../../../../config/SOLDRPlans';
@@ -41,7 +42,7 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
         )}>
             <div className={classNames(
                 className,
-                'bg-main-dark relative p-[60px]',
+                'bg-main-dark relative p-[60px] overflow-hidden',
                 'w-[100vw]',
                 'small:p-[40px] small:h-[100vh] flex',
                 'mobile:p-[20px] mobile:h-[100vh] flex',
@@ -50,8 +51,16 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
                 'x-large:max-w-[1280px] x-large:m-auto x-large:rounded-[20px]',
             )}>
                 <div className={'flex small:flex-col mobile:flex-col small:items-center mobile:items-center small:my-auto mobile:my-auto'}>
-                    <div className={'x-large:w-[60%] large:w-[60%] w-[50%] flex items-center justify-center small:w-full mobile:w-full'}>
+                    <div className={'x-large:w-[60%] large:w-[60%] w-[50%] flex items-center justify-center small:w-full mobile:w-full relative'}>
                         {SOLDRPlans[lang][advantage]}
+
+                        <div className={classNames(
+                            'absolute w-[80%] h-full flex items-center justify-center z-[1]',
+                            animations.planBackDrop,
+                        )}>
+                            <div className={'w-[40%] h-[30%] bg-[#a716ff]'} />
+                            <div className={'w-[40%] h-[30%] bg-[#1657ff]'} />
+                        </div>
                     </div>
 
                     <div className={'x-large:w-[40%] large:w-[40%] w-[50%] flex flex-col justify-center small:w-full mobile:w-full'}>

@@ -1,0 +1,22 @@
+.planBackDrop {
+    filter: blur(100px);
+
+    animation:30s rotate infinite linear;
+
+    div:first-child {
+        transform: translateY(-35px) rotate(15deg);
+    }
+
+    div:last-child {
+        transform: translateY(35px) rotate(15deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}

@@ -15,17 +15,17 @@ import responseEnImage from './assets/response_en.png';
 
 export const SOLDRPlans: {ru: {[key in SOLDRAdvantages]: ReactNode}, en: {[key in SOLDRAdvantages]: ReactNode}} = {
     ru: {
-        system: <NextImage src={systemRuImage} />,
-        orchestration: <NextImage src={orchestrationRuImage} />,
-        lifecycleControl: <NextImage src={lifecycleControlRuImage} />,
-        detection: <NextImage src={detectionRuImage} />,
-        response: <NextImage src={responseRuImage} />,
+        system: <NextImage src={systemRuImage} style={{ zIndex: '10' }} />,
+        orchestration: <NextImage src={orchestrationRuImage} style={{ zIndex: '10' }} />,
+        lifecycleControl: <NextImage src={lifecycleControlRuImage} style={{ zIndex: '10' }} />,
+        detection: <NextImage src={detectionRuImage} style={{ zIndex: '10' }} />,
+        response: <NextImage src={responseRuImage} style={{ zIndex: '10' }} />,
     },
     en: {
-        system: <NextImage src={systemEnImage} />,
-        orchestration: <NextImage src={orchestrationEnImage} />,
-        lifecycleControl: <NextImage src={lifecycleControlEnImage} />,
-        detection: <NextImage src={detectionEnImage} />,
-        response: <NextImage src={responseEnImage} />,
+        system: <NextImage src={systemEnImage} style={{ zIndex: '10' }} />,
+        orchestration: <NextImage src={orchestrationEnImage} style={{ zIndex: '10' }} />,
+        lifecycleControl: <NextImage src={lifecycleControlEnImage} style={{ zIndex: '10' }} />,
+        detection: <NextImage src={detectionEnImage} style={{ zIndex: '10' }} />,
+        response: <NextImage src={responseEnImage} style={{ zIndex: '10' }} />,
     }
 }
