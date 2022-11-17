@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
 import { config } from '../config/config';
+import CloseIcon from './assets/close.svg';
 
 export type CookieNoticeProps = {}
 
@@ -17,7 +18,7 @@ export const CookieNotice: FC<CookieNoticeProps> = (props) => {
 
     const allow = () => {
         const domain = new URL(window.location.href).hostname;
-        
+
         Cookies.set(config.cookieNotice.cookiesAllowedName, 'true', {
             expires: new Date(new Date().valueOf() + config.cookieNotice.expires),
             domain,
@@ -49,6 +50,17 @@ export const CookieNotice: FC<CookieNoticeProps> = (props) => {
                 onClick={allow}
             >
                 Принять все
+            </button>
+
+            <button
+                className={classNames(
+                    'font-bold uppercase border border-main-light-gray w-[30px] h-[30px] rounded-[30px] text-main-light-gray',
+                    'flex items-center justify-center absolute right-[10px] top-[10px]',
+                    'hover:text-hover hover:border-hover',
+                )}
+                onClick={() => setAllowed(true)}
+            >
+                <CloseIcon />
             </button>
         </div>
     )
