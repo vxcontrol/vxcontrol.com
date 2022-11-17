@@ -73,9 +73,9 @@ export const SliderBlock: FC<SliderBlockProps> = (props) => {
             <ul
                 ref={scrollContainerRef}
                 className={classNames(
-                'relative flex overflow-x-scroll items-center gap-4 mobile:gap-6',
+                'relative flex overflow-x-scroll items-start gap-4 mobile:gap-6',
                 // 'ml-[80px] medium:ml-[40px] small:ml-[40px] mobile:ml-[20px]',
-                'pl-[80px] medium:pl-[40px] small:pl-[40px] mobile:pl-[20px] py-[75px] mobile:pt-[85px]',
+                'pl-[80px] medium:pl-[40px] small:pl-[40px] mobile:pl-[20px] pt-[90px] pb-[45px]',
                 styles.hideScrollbars
             )}>
                 {SOLDR.map((key: SOLDRAdvantages) => (
@@ -102,7 +102,7 @@ export const SliderBlock: FC<SliderBlockProps> = (props) => {
                         <div className={classNames(
                             'flex flex-col',
                             'w-[455px] medium:w-[289px] small:w-[289px] mobile:w-[276px]',
-                            'mobile:pl-[16px]'
+                            'mobile:pl-[16px] mobile:mt-[48px]'
                         )}>
                             <h1 className={'flex items-center text-h-small-x medium:text-t-medium small:text-t-medium mobile:text-t-medium mb-[12px]'}>
                                 <span className={'mr-3'}>{t(`${key}_name`)}</span>
