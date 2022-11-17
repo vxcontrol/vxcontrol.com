@@ -8,7 +8,7 @@ const CookieNoticePage = ({ locale, title, description }) => {
         <>
             <Meta title={title} description={description} locale={locale} siteName={title} />
 
-            <CookieNoticeScreen />;
+            <CookieNoticeScreen />
         </>
     );
 };

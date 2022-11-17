@@ -40,6 +40,7 @@ module.exports = {
             },
             backgroundImage: {
                 none: 'unset',
+                'gradient-radial': 'radial-gradient(circle 1000px at 10% -30%, rgb(157 0 254 / 70%), transparent), radial-gradient( circle 1000px at 90% 140%, rgb(55 93 191 / 70%), transparent);',
             },
             colors: {
                 ...colors,
