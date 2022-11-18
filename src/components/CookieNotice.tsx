@@ -44,7 +44,8 @@ export const CookieNotice: FC<CookieNoticeProps> = (props) => {
             className={classNames(
                 'fixed bottom-0 right-0 z-[9] mb-[24px] mr-[24px] flex w-[488px] flex-col rounded-[20px] bg-main-dark p-[32px]',
                 'small:left-[20px] small:mr-[20px] small:mb-[20px] small:w-[calc(100%_-_40px)]',
-                'mobile:left-[10px] mobile:mr-[10px] mobile:mb-[10px] mobile:w-[calc(100%_-_20px)] mobile:p-[20px]'
+                'mobile:left-[10px] mobile:mr-[10px] mobile:mb-[10px] mobile:w-[calc(100%_-_20px)] mobile:p-[20px]',
+                'drop-shadow-cookie-pink'
             )}
         >
             <h1
