@@ -9,5 +9,6 @@
     "table_domain": "домен",
     "table_file_name": "имя файла куки",
     "table_party": "1st или 3rd party",
-    "go_back_link": "Вернуться назад"
+    "go_back_link": "Вернуться назад",
+    "cookie_domain_vxcontrol": "vxcontrol.ru"
 }

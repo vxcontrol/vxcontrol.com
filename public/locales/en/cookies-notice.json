@@ -9,5 +9,6 @@
     "table_domain": "Domain",
     "table_file_name": "Cookie name",
     "table_party": "1st or 3rd party",
-    "go_back_link": "Go back"
+    "go_back_link": "Go back",
+    "cookie_domain_vxcontrol": "vxcontrol.com"
 }
