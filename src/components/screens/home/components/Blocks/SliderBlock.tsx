@@ -83,11 +83,12 @@ export const SliderBlock: FC<SliderBlockProps> = (props) => {
                         className={classNames(
                             'flex cursor-pointer items-center mobile:flex-col',
                             key === 'response' && 'pr-[64px] mobile:pr-0',
+                            animations.letterHoverBackDropTrigger,
                         )}
                         onClick={() => onSelectAdvantage?.(key)}
                     >
                         <div className={'relative'}>
-                            {key === 'system' && <div className={'w-[105px]'}><NextImage src={letterSImage} style={{ zIndex: '2' }} /></div>}
+                            {key === 'system' && <div className={'w-[105px] mt-[-48px] mobile:mt-0'}><NextImage src={letterSImage} style={{ zIndex: '2' }} /></div>}
                             {key === 'orchestration' && <div className={'w-[125px]'}><NextImage src={letterOImage} style={{ zIndex: '2' }} /></div>}
                             {key === 'lifecycleControl' && <div className={'w-[91px]'}><NextImage src={letterLImage} style={{ zIndex: '2' }} /></div>}
                             {key === 'detection' && <div className={'w-[117px]'}><NextImage src={letterDImage} style={{ zIndex: '2' }} /></div>}
@@ -97,18 +98,25 @@ export const SliderBlock: FC<SliderBlockProps> = (props) => {
                                 {...{ [key]: '' }}
                                 className={classNames(
                                 'absolute flex items-center justify-center z-[1]',
+                                key === 'system' && 'mt-[-48px] mobile:mt-0',
                                 animations.SOLDRLetterBackDrop,
                             )}>
                                 <div className={'w-[80px] h-[80px]'} />
                                 <div className={'w-[100px] h-[100px]'} />
                                 <div className={'w-[80px] h-[80px]'} />
                             </div>
+
+                            <div className={classNames(
+                                'absolute left-[100%] w-[300%] h-[70%] bg-blue rounded-[50%]',
+                                key === 'system' ? 'top-[10%]' : 'top-[20%]',
+                                animations.letterHoverBackDrop
+                            )} />
                         </div>
 
                         <div className={classNames(
                             'flex flex-col',
                             'w-[455px] medium:w-[289px] small:w-[289px] mobile:w-[276px]',
-                            'mobile:pl-[16px] mobile:mt-[48px]'
+                            'mobile:pl-[16px] mobile:mt-[48px]',
                         )}>
                             <h1 className={'flex items-center text-h-small-x medium:text-t-medium small:text-t-medium mobile:text-t-medium mb-[12px]'}>
                                 <span className={'mr-3'}>{t(`${key}_name`)}</span>

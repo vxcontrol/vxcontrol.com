@@ -66,7 +66,7 @@ module.exports = {
                 'cookie-pink': [
                     '0px 4px 10px rgba(232, 4, 249, 0.8)',
                     '0px 10px 30px rgba(21, 68, 233, 0.6)'
-                ]
+                ],
             },
             backdropBlur: {
                 popup: '70px',

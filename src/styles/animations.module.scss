@@ -161,6 +161,25 @@
     }
 }
 
+.letterHoverBackDrop {
+    display: none;
+
+    filter: blur(60px);
+    opacity: .5;
+}
+
+.letterHoverBackDropTrigger {
+    &:hover {
+        .letterHoverBackDrop {
+            display: block;
+
+            @screen mobile {
+                display: none;
+            }
+        }
+    }
+}
+
 @keyframes rotate {
     0% {
         transform:rotate(0deg);
