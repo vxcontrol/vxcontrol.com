@@ -126,7 +126,7 @@ export const CookieNoticeScreen: FC<CookieNoticeScreenProps> = (props) => {
                     </div>
                 </section>
 
-                <Footer/>
+                <Footer showCookiePolicyLink={false} />
             </div>
         </>
     );

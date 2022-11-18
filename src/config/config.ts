@@ -1,7 +1,7 @@
 export const config = {
     footer: {
         phoneNumber: '+971521127367',
-        phoneNumberString: '+971 52 112 7367',
+        phoneNumberString: '+971 52 112 7367',
         email: 'info@vxcontrol.com'
     },
     telegramBlock: {

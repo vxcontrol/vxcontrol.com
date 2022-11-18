@@ -8,17 +8,18 @@ import useTranslation from 'next-translate/useTranslation';
 
 export type FooterProps = {
     className?: string;
+    showCookiePolicyLink?: boolean;
 }
 
 export const Footer: FC<FooterProps> = (props) => {
-    const { className } = props;
+    const { className, showCookiePolicyLink = true } = props;
 
     const { t } = useTranslation('common');
 
     return (
         <footer className={classNames(className)}>
             <div className={'container py-[32px] flex gap-[32px] mobile:flex-col mobile:justify-center flex-wrap'}>
-                <div className={'flex flex-col mobile:flex-row gap-[12px] justify-center'}>
+                <div className={'flex mobile:flex-wrap flex-col mobile:flex-row gap-[12px] justify-center'}>
                     <div className={'flex items-center gap-[12px]'}>
                         <PhoneIcon />
 
@@ -55,11 +56,13 @@ export const Footer: FC<FooterProps> = (props) => {
                     {t('footer_address')}
                 </div>
 
-                <div className={'ml-auto flex items-end mobile:justify-center mobile:ml-0'}>
-                    <Link href={'/cookie-policy'}>
-                        <a className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}>{t('footer_cookies_policy_link')}</a>
-                    </Link>
-                </div>
+                {showCookiePolicyLink && (
+                    <div className={'ml-auto flex items-end mobile:justify-center mobile:ml-0'}>
+                        <Link href={'/cookie-policy'}>
+                            <a className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}>{t('footer_cookies_policy_link')}</a>
+                        </Link>
+                    </div>
+                )}
             </div>
         </footer>
     )
