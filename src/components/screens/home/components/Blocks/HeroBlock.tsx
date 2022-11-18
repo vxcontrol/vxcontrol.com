@@ -22,7 +22,7 @@ export const HeroBlock: FC<HeroBlockProps> = (props) => {
                         <LocaleLink locale={'ru'} className={'mobile:w-full text-center'} />
                         <LocaleLink locale={'en'} className={'mobile:w-full text-center'} />
                     </div>
-                    <h1 className={'col-span-2 flex flex-col text-h-base mb-8 large:text-h-medium medium:text-h-medium small:text-h-medium mobile:text-h-small mobile:mb-4'}>
+                    <h1 className={'col-span-2 flex flex-col text-h-base mb-8 large:text-h-medium medium:text-h-medium small:text-h-medium mobile:text-h-small-xm mobile:mb-4'}>
                         {t('hero_title')}
                     </h1>
                     <div

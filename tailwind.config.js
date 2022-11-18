@@ -31,6 +31,7 @@ module.exports = {
                 'h-medium': ['40px', { lineHeight: '140%', fontWeight: '400', }],
                 'h-medium-x': ['36px', { lineHeight: '140%', fontWeight: '400', }],
                 'h-small': ['32px', { lineHeight: '140%', fontWeight: '400', }],
+                'h-small-xm': ['28px', { lineHeight: '140%', fontWeight: '400', }],
                 'h-small-x': ['24px', { lineHeight: '140%', fontWeight: '400', }],
 
                 't-base': ['24px', { lineHeight: '160%', fontWeight: '400', }],
