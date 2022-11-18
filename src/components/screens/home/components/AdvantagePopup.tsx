@@ -70,7 +70,7 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
                             {t(`${advantage}_name`)}
                         </h1>
                         <div
-                            className={'text-t-medium medium:t-small small:t-small mobile:t-small text-main-light-gray'}
+                            className={'text-t-medium medium:t-small small:t-small mobile:t-small text-main-light-gray pb-[40px]'}
                             dangerouslySetInnerHTML={{ __html: t(`${advantage}_description`) }}
                         />
                     </div>

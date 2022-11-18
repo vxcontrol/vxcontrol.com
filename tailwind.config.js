@@ -42,6 +42,8 @@ module.exports = {
             backgroundImage: {
                 none: 'unset',
                 'gradient-radial': 'radial-gradient(circle 1000px at 10% -30%, rgb(157 0 254 / 70%), transparent), radial-gradient( circle 1000px at 90% 140%, rgb(55 93 191 / 70%), transparent);',
+                'gradient-desktop': 'linear-gradient(119.27deg, #42156F 9.03%, #291B46 34.33%, #1F1D37 49.87%, #23264A 72.39%, #1D2668 94.25%);',
+                'gradient-mobile': 'linear-gradient(125.29deg, #42156F 8.25%, #291B46 30.83%, #1F1D37 44.7%, #23264A 64.8%, #1D2668 84.31%);',
             },
             colors: {
                 ...colors,

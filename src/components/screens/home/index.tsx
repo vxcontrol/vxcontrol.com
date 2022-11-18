@@ -17,20 +17,22 @@ export const HomeScreen: FC<HomeScreenProps> = (props) => {
     const [selectedAdvantage, setSelectedAdvantage] = useState<SOLDRAdvantages>();
 
     return (
-        <main className={'bg-gradient-radial'}>
-            <HeroBlock />
+        <>
+            <main className={'bg-gradient-desktop mobile:gradient-mobile'}>
+                <HeroBlock />
 
-            <SliderBlock onSelectAdvantage={setSelectedAdvantage} className={'mt-[80px] medium:mt-[40px] small:mt-[40px] mobile:mt-[20px]'} />
+                <SliderBlock onSelectAdvantage={setSelectedAdvantage} className={'mt-[80px] medium:mt-[40px] small:mt-[40px] mobile:mt-[20px]'} />
 
-            <TelegramBlock className={'mt-[72px] medium:mt-[64px] small:mt-[72px] mobile:mt-[80px]'} />
+                <TelegramBlock className={'mt-[72px] medium:mt-[64px] small:mt-[72px] mobile:mt-[80px]'} />
 
-            <DownloadBlock className={'mt-[72px] medium:mt-[64px] small:mt-[72px] mobile:mt-[80px]'} />
+                <DownloadBlock className={'mt-[72px] medium:mt-[64px] small:mt-[72px] mobile:mt-[80px]'} />
 
-            <Footer className={'bg-panel'} />
+                <Footer className={'bg-panel'} />
 
-            {selectedAdvantage !== undefined && (
-                <AdvantagePopup advantage={selectedAdvantage} onClose={() => setSelectedAdvantage(undefined)} />
-            )}
-        </main>
+                {selectedAdvantage !== undefined && (
+                    <AdvantagePopup advantage={selectedAdvantage} onClose={() => setSelectedAdvantage(undefined)} />
+                )}
+            </main>
+        </>
     );
 }
