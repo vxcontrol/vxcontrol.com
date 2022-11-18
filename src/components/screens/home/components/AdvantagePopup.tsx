@@ -44,9 +44,9 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
                 className,
                 'bg-main-dark relative p-[60px] overflow-hidden',
                 'w-[100vw]',
-                'small:p-[40px] small:h-[100vh] flex',
-                'mobile:p-[20px] mobile:h-[100vh] flex',
-                'medium:h-[100vh] flex',
+                'small:p-[40px] small:h-[100vh] small:flex small:overflow-y-auto',
+                'mobile:p-[20px] mobile:h-[100vh] mobile:flex mobile:overflow-y-auto',
+                'medium:h-[100vh] medium:flex medium:overflow-y-auto',
                 'large:max-w-[1024px] large:m-auto large:rounded-[20px]',
                 'x-large:max-w-[1280px] x-large:m-auto x-large:rounded-[20px]',
             )}>
@@ -76,9 +76,9 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
 
                 <button
                     className={classNames(
-                        'rounded-full border border border-main-light-gray hover:border-hover w-[54px] h-[54px] flex justify-center items-center',
+                        'rounded-full border border border-main-light-gray hover:border-hover w-[54px] h-[54px] flex justify-center items-center z-[10]',
                         'mobile:w-[40px] mobile:h-[40px]',
-                        'absolute top-[20px] right-[20px]'
+                        'fixed top-[20px] right-[20px]'
                     )}
                     onClick={onClose}
                 >
