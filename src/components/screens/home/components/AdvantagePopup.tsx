@@ -79,8 +79,8 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
                 <button
                     className={classNames(
                         'rounded-full border border border-main-light-gray hover:border-hover w-[54px] h-[54px] flex justify-center items-center z-[10]',
-                        'mobile:w-[40px] mobile:h-[40px]',
-                        'fixed top-[20px] right-[20px]'
+                        'absolute top-[20px] right-[20px]',
+                        'mobile:w-[40px] mobile:h-[40px] mobile:fixed',
                     )}
                     onClick={onClose}
                 >
