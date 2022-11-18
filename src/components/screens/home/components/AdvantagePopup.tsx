@@ -47,7 +47,7 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
                 'bg-main-dark relative p-[60px] overflow-hidden',
                 'w-[100vw]',
                 'small:p-[40px] small:h-[100vh] small:flex small:overflow-y-auto',
-                'mobile:p-[20px] mobile:h-[100vh] mobile:flex mobile:overflow-y-auto',
+                'mobile:p-[20px] mobile:h-[100vh] mobile:flex mobile:overflow-y-auto mobile:pb-[80px]',
                 'medium:h-[100vh] medium:flex medium:overflow-y-auto',
                 'large:max-w-[1024px] large:m-auto large:rounded-[20px]',
                 'x-large:max-w-[1280px] x-large:m-auto x-large:rounded-[20px]',

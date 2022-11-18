@@ -79,7 +79,13 @@ export const SliderBlock: FC<SliderBlockProps> = (props) => {
                 styles.hideScrollbars
             )}>
                 {SOLDR.map((key: SOLDRAdvantages) => (
-                    <li key={key} className={'flex cursor-pointer items-center mobile:flex-col'} onClick={() => onSelectAdvantage?.(key)}>
+                    <li key={key}
+                        className={classNames(
+                            'flex cursor-pointer items-center mobile:flex-col',
+                            key === 'response' && 'pr-[64px] mobile:pr-0',
+                        )}
+                        onClick={() => onSelectAdvantage?.(key)}
+                    >
                         <div className={'relative'}>
                             {key === 'system' && <div className={'w-[105px]'}><NextImage src={letterSImage} style={{ zIndex: '2' }} /></div>}
                             {key === 'orchestration' && <div className={'w-[125px]'}><NextImage src={letterOImage} style={{ zIndex: '2' }} /></div>}
