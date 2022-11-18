@@ -24,9 +24,11 @@ export const AdvantagePopup: FC<AdvantagePopupProps> = (props) => {
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
 
         return () => {
             document.body.style.overflow = '';
+            document.body.style.position = '';
         }
     }, []);
 

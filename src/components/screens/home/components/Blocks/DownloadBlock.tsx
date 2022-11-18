@@ -42,7 +42,13 @@ export const DownloadBlock: FC<DownloadBlockProps> = (props) => {
                     </div>
 
                     <a
-                        className={'flex items-center text-t-medium px-[40px] py-[20px] bg-main-dark rounded-[54px] w-fit hover:drop-shadow-hover-simple'}
+                        className={classNames(
+                            'flex items-center text-t-medium px-[40px] py-[20px] bg-main-dark rounded-[54px] w-fit',
+                            'x-large:hover:drop-shadow-hover-simple',
+                            'large:hover:drop-shadow-hover-simple',
+                            'medium:hover:drop-shadow-hover-simple',
+                            'small:hover:drop-shadow-hover-simple',
+                        )}
                         href={config.downloadBlock.link}
                         target={'_blank'}
                         rel={'noopener noreferrer'}
