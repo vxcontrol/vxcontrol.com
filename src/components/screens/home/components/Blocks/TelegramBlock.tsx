@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import AtSymbolIcon from '../assets/at_symbol.svg';
 import { config } from '../../../../../config/config';
 import useTranslation from 'next-translate/useTranslation';
+import styles from '../../../../../styles/animations.module.scss';
 
 export type TelegramBlockProps = {
     className?: string;
@@ -33,7 +34,17 @@ export const TelegramBlock: FC<TelegramBlockProps> = (props) => {
                     {t('telegram_link')}
                 </a>
 
-                <AtSymbolIcon className={'absolute right-0 top-0 mobile:right-[-50%] mobile:scale-50 z-[1]'} />
+                <AtSymbolIcon className={'absolute right-[7%] top-[12%] mobile:hidden z-[1]'} />
+
+                <div className={classNames(
+                    'absolute w-[50%] h-[50%] flex items-center justify-center right-[-9%] top-[29%] mobile:hidden z-[0]',
+                    'medium:right-[-1%] medium:top-[29%]',
+                    'small:right-[3%] small:top-[29%]',
+                    styles.telegramIconBackDrop
+                )}>
+                    <div className={'w-[20%] h-[80%]'} />
+                    <div className={'w-[20%] h-[80%]'} />
+                </div>
             </div>
         </section>
     )

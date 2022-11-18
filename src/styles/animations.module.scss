@@ -19,16 +19,28 @@
 .logoBackDrop {
     filter: blur(80px);
 
+    @screen mobile {
+        filter: blur(45px);
+    }
+
     animation:30s rotate infinite linear;
 
     div:first-child {
         transform: translateY(-35px) rotate(15deg);
+
+        @screen mobile {
+            transform: translateY(45px) translateX(65px) rotate(15deg);
+        }
 
         background-color: #a716ff;
     }
 
     div:last-child {
         transform: translateY(35px) rotate(15deg);
+
+        @screen mobile {
+            transform: translateY(-45px) translateX(-65px) rotate(15deg);
+        }
 
         background-color: #1657ff;
     }
@@ -128,6 +140,24 @@
         div:last-child {
             background-color: #33ff00;
         }
+    }
+}
+
+.telegramIconBackDrop {
+    filter: blur(40px);
+
+    animation:30s rotate infinite linear;
+
+    div:first-child {
+        transform: translateY(-35px) rotate(15deg);
+
+        background-color: #265aff;
+    }
+
+    div:last-child {
+        transform: translateY(35px) rotate(15deg);
+
+        background-color: #d426ff;
     }
 }
 
