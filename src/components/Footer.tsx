@@ -24,7 +24,7 @@ export const Footer: FC<FooterProps> = (props) => {
                         <PhoneIcon />
 
                         <a
-                            className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button'}
+                            className={'text-t-small medium:text-t-small-x small:text-t-small-x mobile:text-t-small-x text-blue hover:text-blue-button mr-2'}
                             href={`tel:${config.footer.phoneNumber}`}
                             target={'_blank'}
                             rel={'noopener noreferrer'}

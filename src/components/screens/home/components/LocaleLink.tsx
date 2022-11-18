@@ -21,6 +21,7 @@ export const LocaleLink: FC<LocaleLinkProps> = ({ className, locale }) => {
                     'font-bold uppercase border border-main-light-gray px-[32px] py-[10px] rounded-[54px] text-main-light-gray',
                     'hover:text-hover hover:border-hover',
                     locale === currentLocale && 'bg-main-light-gray text-main-dark pointer-events-none',
+                    locale === 'ru' && 'mr-2',
                 )}>{LOCALE_TEXT[locale]}</a>
         </Link>
     );
