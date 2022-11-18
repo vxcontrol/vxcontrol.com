@@ -17,7 +17,7 @@ export const HomeScreen: FC<HomeScreenProps> = (props) => {
     const [selectedAdvantage, setSelectedAdvantage] = useState<SOLDRAdvantages>();
 
     return (
-        <>
+        <main className={'bg-gradient-radial'}>
             <HeroBlock />
 
             <SliderBlock onSelectAdvantage={setSelectedAdvantage} className={'mt-[80px] medium:mt-[40px] small:mt-[40px] mobile:mt-[20px]'} />
@@ -31,6 +31,6 @@ export const HomeScreen: FC<HomeScreenProps> = (props) => {
             {selectedAdvantage !== undefined && (
                 <AdvantagePopup advantage={selectedAdvantage} onClose={() => setSelectedAdvantage(undefined)} />
             )}
-        </>
+        </main>
     );
 }

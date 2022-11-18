@@ -9,8 +9,8 @@ module.exports = {
     ],
     theme: {
         screens: {
-            mobile: { min: '320px', max: '414px' },
-            small: { min: '415px', max: '767px' },
+            mobile: { min: '320px', max: '480px' },
+            small: { min: '481px', max: '767px' },
             medium: { min: '768px', max: '1023px' },
             large: { min: '1024px', max: '1439px' },
             'x-large': { min: '1440px' },
