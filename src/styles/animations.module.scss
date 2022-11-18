@@ -32,6 +32,9 @@
             transform: translateY(45px) translateX(65px) rotate(15deg);
         }
 
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+
         background-color: #a716ff;
     }
 
@@ -42,13 +45,16 @@
             transform: translateY(-45px) translateX(-65px) rotate(15deg);
         }
 
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+
         background-color: #1657ff;
     }
 }
 
 .SOLDRLetterBackDrop {
     filter: blur(30px);
-    animation:5s rotate infinite linear;
+    animation:20s rotate infinite linear;
 
     div:first-child {
         transform: translateX(60px) translateY(-30px) rotate(-45deg);
@@ -149,13 +155,19 @@
     animation:30s rotate infinite linear;
 
     div:first-child {
-        transform: translateY(-35px) rotate(15deg);
+        transform: translateY(-15px) rotate(15deg);
+
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
 
         background-color: #265aff;
     }
 
     div:last-child {
-        transform: translateY(35px) rotate(15deg);
+        transform: translateY(15px) rotate(15deg);
+
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
 
         background-color: #d426ff;
     }

@@ -18,7 +18,7 @@
     "orchestration_shortDescription": "In-house mechanisms for delivering security policies and third-party software to endpoints.",
     "orchestration_description": "<p>You can remotely control the configuration of modules and operating system on an end device. In addition, our content delivery technologies allow you to install and configure third-party software such as Sysmon.</p><p>SOLDR's configuration management capabilities are comparable to those of leading solutions in this field, such as Puppet, SaltStack, and Chef. This allows IT teams to stop using these systems.</p>",
 
-    "lifecycleControl_name": "Lifecycle Control",
+    "lifecycleControl_name": "Lifecycle control",
     "lifecycleControl_shortDescription": "Monitoring of systems supporting business processes and prompt intervention in case of security threats.",
     "lifecycleControl_description": "<p>SOLDR can interact with any system that supports the building of business processes and, if necessary, modify its configuration.</p><p>Allows you to analyze logs, collect key metrics, and visualize the obtained data using Jaeger, Elasticsearch, VictoriaMetrics, and Grafana.</p>",
 

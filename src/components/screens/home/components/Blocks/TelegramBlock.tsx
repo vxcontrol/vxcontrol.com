@@ -42,8 +42,8 @@ export const TelegramBlock: FC<TelegramBlockProps> = (props) => {
                     'small:right-[3%] small:top-[29%]',
                     styles.telegramIconBackDrop
                 )}>
-                    <div className={'w-[20%] h-[80%]'} />
-                    <div className={'w-[20%] h-[80%]'} />
+                    <div className={'w-[20%] h-[140%]'} />
+                    <div className={'w-[20%] h-[140%]'} />
                 </div>
             </div>
         </section>

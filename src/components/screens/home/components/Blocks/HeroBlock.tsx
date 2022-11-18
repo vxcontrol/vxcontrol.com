@@ -8,7 +8,7 @@ export type HeroBlockProps = {}
 export const HeroBlock: FC<HeroBlockProps> = (props) => {
     const {} = props;
 
-    const { t } = useTranslation('home');
+    const { t, lang } = useTranslation('home');
 
     return (
         <>
@@ -18,10 +18,14 @@ export const HeroBlock: FC<HeroBlockProps> = (props) => {
 
             <section className={'container'}>
                 <div className={'grid grid-rows-[minmax(0,_auto)_minmax(0,_auto)] grid-cols-3 flex-col small:flex mobile:flex'}>
-                    <div className={'row-span-2 row-start-1 col-start-3 flex justify-end items-baseline gap-2 small:justify-start small:mb-[32px] mobile::justify-start mobile:mb-[20px]'}>
-                        <LocaleLink locale={'ru'} className={'mobile:w-full text-center'} />
-                        <LocaleLink locale={'en'} className={'mobile:w-full text-center'} />
-                    </div>
+
+                    {lang === 'ru' && (
+                        <div className={'row-span-2 row-start-1 col-start-3 flex justify-end items-baseline gap-2 small:justify-start small:mb-[32px] mobile::justify-start mobile:mb-[20px]'}>
+                            <LocaleLink locale={'ru'} className={'mobile:w-full text-center'} />
+                            <LocaleLink locale={'en'} className={'mobile:w-full text-center'} />
+                        </div>
+                    )}
+
                     <h1 className={'col-span-2 flex flex-col text-h-base mb-8 large:text-h-medium medium:text-h-medium small:text-h-medium mobile:text-h-small-xm mobile:mb-4'}>
                         {t('hero_title')}
                     </h1>

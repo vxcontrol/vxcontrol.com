@@ -27,8 +27,8 @@ export const DownloadBlock: FC<DownloadBlockProps> = (props) => {
                         'top-[-15%] left-[-15%]',
                         animations.logoBackDrop,
                     )}>
-                        <div className={'w-[60%] h-[50%] mobile:h-[100%]'} />
-                        <div className={'w-[60%] h-[50%] mobile:h-[100%]'} />
+                        <div className={'w-[40%] h-[80%] mobile:h-[100%]'} />
+                        <div className={'w-[40%] h-[80%] mobile:h-[100%]'} />
                     </div>
                 </div>
 
