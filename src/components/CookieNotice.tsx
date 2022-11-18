@@ -79,9 +79,10 @@ export const CookieNotice: FC<CookieNoticeProps> = (props) => {
             </div>
 
             <button
-                className={
-                    'z-[2] w-fit rounded-[54px] bg-blue-button px-[50px] py-[20px] text-t-medium hover:bg-blue'
-                }
+                className={classNames(
+                    'z-[2] w-fit rounded-[54px] bg-blue-button px-[50px] py-[20px] text-t-medium hover:bg-blue',
+                    'mobile:px-[16px] mobile:py-[8px] mobile:text-t-small'
+                )}
                 onClick={allow}
             >
                 {t('cookie_notice_popup_allow_all')}
